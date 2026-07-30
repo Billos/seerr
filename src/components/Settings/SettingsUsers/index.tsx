@@ -81,6 +81,9 @@ const SettingsUsers = () => {
     return <LoadingSpinner />;
   }
 
+  const isJellyfin =
+    settings.currentSettings.mediaServerType === MediaServerType.JELLYFIN ||
+    settings.currentSettings.mediaServerType === MediaServerType.EMBY;
   const mediaServerFormatValues = {
     mediaServerName:
       settings.currentSettings.mediaServerType === MediaServerType.JELLYFIN
@@ -208,25 +211,23 @@ const SettingsUsers = () => {
                           setFieldValue('quickConnectOnly', false);
                         }}
                       >
-                        {values.mediaServerLogin &&
-                          settings.currentSettings.mediaServerType ===
-                            MediaServerType.JELLYFIN && (
-                            <LabeledCheckbox
-                              id="quickConnectOnly"
-                              label={intl.formatMessage(
-                                messages.quickConnectOnly
-                              )}
-                              description={intl.formatMessage(
-                                messages.quickConnectOnlyTip
-                              )}
-                              onChange={() =>
-                                setFieldValue(
-                                  'quickConnectOnly',
-                                  !values.quickConnectOnly
-                                )
-                              }
-                            />
-                          )}
+                        {values.mediaServerLogin && isJellyfin && (
+                          <LabeledCheckbox
+                            id="quickConnectOnly"
+                            label={intl.formatMessage(
+                              messages.quickConnectOnly
+                            )}
+                            description={intl.formatMessage(
+                              messages.quickConnectOnlyTip
+                            )}
+                            onChange={() =>
+                              setFieldValue(
+                                'quickConnectOnly',
+                                !values.quickConnectOnly
+                              )
+                            }
+                          />
+                        )}
                       </LabeledCheckbox>
                       {!values.mediaServerLogin && values.localLogin && (
                         <div className="mt-4">
