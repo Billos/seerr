@@ -1276,6 +1276,7 @@
   "components.Login.enablessl": "Utilise SSL",
   "components.Login.hostname": "URL de {mediaServerName}",
   "components.Login.port": "Port",
+  "components.Login.quickconnect": "Quick Connect",
   "components.Login.urlBase": "URL de base",
   "components.Login.validationPortRequired": "Vous devez fournir un numéro de port valide",
   "components.Login.validationUrlBaseLeadingSlash": "L'URL de base doit commencer par un slash (/)",
