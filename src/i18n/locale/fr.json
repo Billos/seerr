@@ -1412,6 +1412,8 @@
   "components.Settings.SettingsNetwork.validationProxyPort": "Vous devez fournir un port valide",
   "components.Settings.SettingsUsers.loginMethodsTip": "Configurer les méthodes de connexion pour les utilisateurs.",
   "components.Settings.SettingsUsers.mediaServerLogin": "Activer la connexion {mediaServerName}",
+  "components.Settings.SettingsUsers.quickConnectOnly": "Forcer la connexion Quick Connect",
+  "components.Settings.SettingsUsers.quickConnectOnlyTip": "Forcer les utilisateurs à se connecter uniquement via Quick Connect.",
   "components.Settings.overrideRules": "Règles de contournement",
   "components.UserProfile.UserSettings.LinkJellyfinModal.errorExists": "Ce compte est déjà lié à un utilisateur {applicationName}",
   "components.UserProfile.UserSettings.LinkJellyfinModal.errorUnknown": "Une erreur inconnue s'est produite",
