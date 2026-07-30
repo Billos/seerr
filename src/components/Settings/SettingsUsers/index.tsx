@@ -200,12 +200,13 @@ const SettingsUsers = () => {
                           messages.mediaServerLoginTip,
                           mediaServerFormatValues
                         )}
-                        onChange={() =>
+                        onChange={() => {
                           setFieldValue(
                             'mediaServerLogin',
                             !values.mediaServerLogin
-                          )
-                        }
+                          );
+                          setFieldValue('quickConnectOnly', false);
+                        }}
                       >
                         {values.mediaServerLogin &&
                           settings.currentSettings.mediaServerType ===
