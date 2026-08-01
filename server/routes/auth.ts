@@ -259,8 +259,8 @@ authRoutes.post('/jellyfin', async (req, res, next) => {
   }
 
   if (settings.main.quickConnectOnly) {
-    return res.status(500).json({
-      error: 'Jellyfin login can only be used with Quick Connect enabled.',
+    return res.status(403).json({
+      error: 'Jellyfin login can only be used with Quick Connect.',
     });
   }
 
